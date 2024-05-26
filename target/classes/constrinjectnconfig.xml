@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.springcore.constrinjection.Certification" name="cert1">
+        <constructor-arg value="AWS Solution Architect"/>
+    </bean>
+    <bean class="org.springcore.constrinjection.Person" name="person1">
+        <constructor-arg value="Suman"/>
+        <constructor-arg value="24" type="int"/>
+        <constructor-arg ref="cert1" />
+    </bean>
+</beans>

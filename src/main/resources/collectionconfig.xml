@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean class="org.springcore.setterinjection.collections.Employee" name="emp1">
+        <property name="name">
+            <value>Suman</value>
+        </property>
+        <property name="phones">
+            <list>
+                <value>943843</value>
+                <value>344825</value>
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>Bangalore</value>
+                <value>Thirthahalli</value>
+                <value>Kollur</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="Java" value="2hrs"/>
+                <entry key="spark" value="3hrs"/>
+            </map>
+        </property>
+    </bean>
+</beans>
